@@ -67,8 +67,8 @@ function Container() {
   };
 
   return (
-    <div className="container d-flex justify-content-center align-items-center" style={{ backgroundColor: "#f5f5f5" }}>
-      <div className="card p-4 shadow-lg" style={{ width: "500px", background: "linear-gradient(135deg, #74ebd5, #acb6e5)", color: "#ffffff" }}>
+    <div className="container d-flex justify-content-center align-items-center min-vh-100" style={{ backgroundColor: "#f5f5f5" }}>
+      <div className="card p-4 shadow-lg w-100" style={{ maxWidth: "500px", background: "linear-gradient(135deg, #74ebd5, #acb6e5)", color: "#ffffff" }}>
         <h2 className="text-center mb-3">Task Management App</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -102,13 +102,13 @@ function Container() {
                 {taskList.map((t, index) => (
                   <Draggable key={index} draggableId={index.toString()} index={index}>
                     {(provided) => (
-                      <li ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} className="list-group-item d-flex justify-content-between align-items-center">
-                        <div>
+                      <li ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} className="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center text-break">
+                        <div className="w-100">
                           <strong>{t.name}</strong>
                           <p className="mb-1">{t.description}</p>
                           <span className={`badge ${getStatusClass(t.status)}`}>{t.status}</span>
                         </div>
-                        <div>
+                        <div className="mt-2 mt-md-0 d-flex">
                           <button onClick={() => handleEdit(index)} className="btn btn-sm btn-outline-primary me-2"><i className="bi bi-pencil-square"></i></button>
                           <button onClick={() => handleDelete(index)} className="btn btn-sm btn-outline-danger"><i className="bi bi-trash"></i></button>
                         </div>
@@ -127,7 +127,3 @@ function Container() {
 }
 
 export default Container;
-
-
-
-
