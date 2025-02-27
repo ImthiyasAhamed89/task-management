@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Container } from './components'
+import Container from './components/container/Container'
 
 import './App.css'
 
