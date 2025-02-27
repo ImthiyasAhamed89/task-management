@@ -4,25 +4,17 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 
 function Container() {
-  // Load tasks from localStorage when component mounts
   const [taskList, setTaskList] = useState(() => {
     const savedTasks = localStorage.getItem("tasks");
-
     return savedTasks ? JSON.parse(savedTasks) : [];
   });
 
   const [task, setTask] = useState({ name: "", description: "", status: "" });
   const [editIndex, setEditIndex] = useState(null);
 
-  // Save task list to localStorage whenever taskList changes
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(taskList));
   }, [taskList]);
-
-  useEffect(()=>{
-    console.log(taskList ,"tajfks");
-    
-  },[taskList])
 
   const handleChange = (e) => {
     setTask({ ...task, [e.target.name]: e.target.value });
@@ -75,8 +67,8 @@ function Container() {
   };
 
   return (
-    <div className="container d-flex justify-content-center align-items-center " style={{overflowY:"auto"}}>
-      <div className="card p-4 shadow-lg" style={{ width: "500px" }}>
+    <div className="container d-flex justify-content-center align-items-center" style={{ backgroundColor: "#f5f5f5" }}>
+      <div className="card p-4 shadow-lg" style={{ width: "500px", background: "linear-gradient(135deg, #74ebd5, #acb6e5)", color: "#ffffff" }}>
         <h2 className="text-center mb-3">Task Management App</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -135,6 +127,7 @@ function Container() {
 }
 
 export default Container;
+
 
 
 
