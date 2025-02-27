@@ -1,0 +1,137 @@
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  h2, h3 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin: 8px 0 4px;
+    color: darkgreen; /* Change label color */
+  }
+  
+  input, textarea, select {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: blue;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  /* Task List Styles */
+  .taskList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .taskItem {
+    background: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-left: 5px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .taskItem strong {
+    font-size: 18px;
+  }
+  
+  .taskItem p {
+    margin: 5px 0;
+    color: gray;
+  }
+  
+  .taskItem span {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  /* Color coding based on status */
+  .start {
+    background-color: yellow;
+  }
+  
+  .inprogress {
+    background-color: orange;
+  }
+  
+  .completed {
+    background-color: green;
+    color: white;
+  }
+  
+  /* Edit & Delete Button Styles */
+  .actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .editBtn, .deleteBtn {
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .editBtn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .editBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  .deleteBtn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .deleteBtn:hover {
+    background-color: #a71d2a;
+  }
+  
+/* .container{
+background: linear-gradient(180deg,rgba(213, 219, 238, 0.63)0%, #c8d9ea 32.29% #bed5e8, rgba(200,216,236,0.58)100%);
+box-shadow: 8px 13px 19px -3px rgba(0,0,0,33);
+border-radius: 39px;
+width: 70%;
+padding: 24px 63px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+
+
+} */
